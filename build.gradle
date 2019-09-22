@@ -1,0 +1,23 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.pchudzik.blog.example.archunit'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation "org.codehaus.groovy:groovy-all:2.5.7"
+	testImplementation "eu.codearte.catch-exception:catch-exception:1.4.4"
+	testImplementation "org.mockito:mockito-core:3.0.0"
+}
